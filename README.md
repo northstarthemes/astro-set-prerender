@@ -1,1 +1,1 @@
-./packages/astro-set-prerender/README.md
+packages/astro-set-prerender/README.md
