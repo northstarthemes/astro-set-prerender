@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"target": "es2022",
+		"module": "esnext",
+		"lib": ["esnext"],
+		"noUncheckedIndexedAccess": true,
+		"strictNullChecks": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"noUnusedLocals": true,
+		"strict": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"moduleResolution": "Bundler",
+		"esModuleInterop": true,
+		"outDir": "${configDir}/node_modules/.cache/tsc",
+		"composite": true,
+		"verbatimModuleSyntax": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true
+	},
+	"include": ["./*.ts", "./*.spec.ts"],
+	"files": [],
+	"references": [
+		{
+			"path": "./packages/astro-set-prerender"
+		}
+	]
+}

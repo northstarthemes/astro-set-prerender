@@ -1,0 +1,55 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - main
+
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        strategy:
+            fail-fast: false
+            matrix:
+                os: [ubuntu-latest, windows-latest, macos-latest]
+
+        runs-on: ${{ matrix.os }}
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: ./.github/actions/setup
+
+            - name: Build
+              run: pnpm run build
+
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: ./.github/actions/setup
+
+            - name: Lint
+              run: pnpm run lint
+
+            - name: Typecheck
+              run: pnpm run typecheck
+
+    test-unit:
+        strategy:
+            fail-fast: false
+            matrix:
+                os: [ubuntu-latest, windows-latest, macos-latest]
+
+        runs-on: ${{ matrix.os }}
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: ./.github/actions/setup
+
+            - name: Test
+              run: pnpm run test
