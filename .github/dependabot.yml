@@ -1,0 +1,24 @@
+version: 2
+updates:
+    # Enable version updates for npm
+    - package-ecosystem: 'npm'
+      directory: '/'
+      schedule:
+          interval: 'weekly'
+      labels:
+          - 'dependencies'
+          - 'npm'
+      versioning-strategy: auto
+      groups:
+          dependencies:
+              patterns:
+                  - '*'
+
+    # Enable version updates for GitHub Actions
+    - package-ecosystem: 'github-actions'
+      directory: '/'
+      schedule:
+          interval: 'weekly'
+      labels:
+          - 'dependencies'
+          - 'github-actions'
