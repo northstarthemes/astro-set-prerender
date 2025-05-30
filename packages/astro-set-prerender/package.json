@@ -1,7 +1,7 @@
 {
   "name": "@northstarthemes/astro-set-prerender",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Prerender plugin for Astro by North Star Themes",
   "author": "North Star Themes <northstarthemesofficial@gmail.com>",
   "license": "MIT",
