@@ -28,9 +28,9 @@
     "build": "tsdown"
   },
   "devDependencies": {
-    "@types/node": "^22.15.27",
+    "@types/node": "^22.15.29",
     "astro": "^5.8.0",
-    "tsdown": "^0.12.4",
+    "tsdown": "^0.12.6",
     "typescript": "^5.8.3"
   },
   "publishConfig": {
